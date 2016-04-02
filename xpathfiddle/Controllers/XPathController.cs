@@ -19,12 +19,9 @@ namespace xpathfiddle.Controllers
 
         [HttpPost]
         public JsonResult ExecuteXpath(XpathDemo demo)
-        //public JsonResult ExecuteXpath(string jsonDemo)
         {
-            //var serializer = new JavaScriptSerializer();
-            //var demo = serializer.Deserialize<XpathDemo>(jsonDemo);
             string result = "", error = "";
-            var processor = new Xpath3Processor();
+            IXpathProcessor processor = XpathProcessorFactory.Get(XpathEngine.Saxon);
             try
             {
                 result = processor.Process(demo.Xml, demo.Xpath);

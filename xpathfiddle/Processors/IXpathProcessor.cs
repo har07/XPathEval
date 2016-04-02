@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace xpathfiddle.Processors
 {
-    interface IXpathProcessor
+    public interface IXpathProcessor
     {
         string Process(string xml, string xpath);
     }

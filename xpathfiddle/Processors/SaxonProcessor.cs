@@ -7,13 +7,13 @@ using System.Xml;
 
 namespace xpathfiddle.Processors
 {
-    public class Xpath3Processor : IXpathProcessor
+    public class SaxonProcessor : IXpathProcessor
     {
         Processor _processor;
         XPathCompiler _compiler;
         DocumentBuilder _builder;
 
-        public Xpath3Processor()
+        public SaxonProcessor()
         {
             _processor = new Processor();
             _compiler = _processor.NewXPathCompiler();
