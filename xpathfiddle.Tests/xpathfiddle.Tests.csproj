@@ -87,7 +87,6 @@
     <Compile Include="Processors\DataProvider.cs" />
     <Compile Include="Processors\DotNetProcessorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Controllers\HomeControllerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -100,6 +99,9 @@
       <Project>{E1D1D2F7-4AAC-4491-A7A6-4EB1EF0AEEA6}</Project>
       <Name>xpathfiddle</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
