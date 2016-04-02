@@ -1,16 +1,83 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "XPath Eval";
 }
 
 
 
 <div class="row">
-    <div id="divactions">
+    @*<div id="divactions" class="col-md-offset-6 col-md-6">
         <button onclick="executeXpath();">Run</button>
+        <button onclick="formatXml();">Format XML</button>
+    </div>*@
+    <div class="col-md-6 box-long box-left">
+        <div class="powers">
+            <div class="editor-actions-left">
+                <h2 class="box-title">
+                    <span class="box-title-name">XML</span>
+                </h2>
+            </div>
+            <div class="editor-actions-right">
+                <button onclick="formatXml();"
+                        class="button button-medium mini-button tidy-code-button">
+                    Format
+                </button>
+            </div>
+        </div>
+        <div class="code-container">
+            <div id="xmleditor"></div>
+        </div>
     </div>
-    <div id="xmleditor"></div>
-    <div id="xpatheditor"></div>
-    <div id="outputdisplay"></div>
+    <div class="col-md-6 box-short box-right">
+        <div class="powers">
+            <div class="editor-actions-left">
+                <h2 class="box-title">
+                    <span class="box-title-name">XPath/XQuery</span>
+                </h2>
+            </div>
+            <div class="editor-actions-right">
+                <button onclick="executeXpath();"
+                        class="button button-medium mini-button tidy-code-button">
+                    Run
+                </button>
+            </div>
+        </div>
+        <div class="code-container">
+            <div id="xpatheditor"></div>
+        </div>
+    </div>
+    <div class="col-md-6 box box-right">
+        @*<div class="powers">
+            <div title="Double-click to expand." class="powers-drag-handle"></div>
+            <div class="editor-actions-left">
+                <button title="Open Settings" data-type="html" class="button button-medium mini-button settings-nub" id="settings-pane-html">
+                    <svg class="icon-gear">
+                        <use href="#gear" />
+                    </svg>
+                </button>
+                <h2 class="box-title">
+                    <span class="box-title-name">HTML</span>
+                </h2>
+            </div>
+            <div class="editor-actions-right">
+                <button class="button button-medium mini-button tidy-code-button" data-type="html" id="html-tidy-code-button">
+                    Tidy
+                </button>
+                <button id="html-view-compiled" title="Toggle Compiled View" class="button button-medium mini-button view-compiled-button" data-type="html">
+                    View Compiled
+                </button>
+                <button title="Close" data-type="html" class="button button-medium mini-button close-editor-button">
+                    <svg class="icon-x">
+                        <use href="#x" />
+                    </svg>
+                </button>
+            </div>
+        </div>*@
+        <div class="code-container">
+            <div id="outputdisplay"></div>
+        </div>
+    </div>
+    @*<div id="xpatheditor"></div>
+    <div id="outputdisplay"></div>*@
     @*<div class="col-md-6">
         <div id="xpatheditor"></div>
     </div>*@

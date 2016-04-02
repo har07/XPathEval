@@ -32,5 +32,20 @@ namespace xpathfiddle.Controllers
             }
             return Json(new { data = result, error });
         }
+
+        [HttpPost]
+        public JsonResult FormatXml(XpathDemo demo)
+        {
+            string result = "", error = "";
+            try
+            {
+                result = DotNetProcessor.Format(demo.Xml);
+            }
+            catch (Exception e)
+            {
+                error = e.Message;
+            }
+            return Json(new { data = result, error });
+        }
     }
 }

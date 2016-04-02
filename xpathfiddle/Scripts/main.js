@@ -33,6 +33,27 @@ function executeXpath() {
     });
 }
 
+function formatXml() {
+    $.ajax({
+        type: "POST",
+        url: '/XPath/FormatXml',
+        contentType: 'application/json',
+        data: getModel(),
+        success: function (result) {
+            if (result["error"] != "") {
+                //$('#status').val(result["error"]);
+                alert(result["error"]);
+            } else {
+                ace.edit("xmleditor").getSession().setValue(result["data"]);
+            }
+        },
+        error: function (xhr) {
+            console.log(xhr.responseText);
+            alert("Error has occurred..");
+        }
+    });
+}
+
 $(document).ready(function () {
     var xmleditor = ace.edit("xmleditor");
     xmleditor.setTheme("ace/theme/sqlserver");
