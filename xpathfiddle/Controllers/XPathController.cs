@@ -21,7 +21,7 @@ namespace xpathfiddle.Controllers
         public JsonResult ExecuteXpath(XpathDemo demo)
         {
             string result = "", error = "";
-            IXpathProcessor processor = XpathProcessorFactory.Get(XpathEngine.Saxon);
+            IXpathProcessor processor = XpathProcessorFactory.Get(demo.Engine);
             try
             {
                 result = processor.Process(demo.Xml, demo.Xpath);

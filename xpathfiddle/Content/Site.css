@@ -24,6 +24,10 @@ textarea {
     max-width: 280px;
 }
 
+.block {
+    display: block;
+}
+
 .box-long{
     height: 600px;
 }
@@ -72,6 +76,23 @@ textarea {
     padding: 2px 7px;
 }
 
+.button-medium {
+    background: #343436 none repeat scroll 0 0;
+    color: white;
+}
+
+button > svg {
+    transition: transform 0.4s ease 0s;
+    height: 10px;
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+    width: 10px;
+    display: inline-block;
+    fill: white;
+    pointer-events: none;
+}
+
 .box-title::after {
     font-size: 12px;
     font-weight: normal;
@@ -93,6 +114,19 @@ textarea {
     position: absolute;
     right: 5px;
     top: 5px;
+}
+
+#engine-dialog {
+    z-index: 11;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    height: 50px;
+    margin-top: -25px;
+    background: #343436 none repeat scroll 0 0;
+    color: white;
 }
 
 #xmleditor { 

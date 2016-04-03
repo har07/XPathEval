@@ -2,6 +2,7 @@
     var model = {
         Id: "",
         Revision: 0,
+        Engine: $('#engine-id').val(),
         Xml: ace.edit("xmleditor").getSession().getValue(),
         Xpath: ace.edit("xpatheditor").getSession().getValue(),
         XpathResult: {
@@ -52,6 +53,20 @@ function formatXml() {
             alert("Error has occurred..");
         }
     });
+}
+
+function changeEngine() {
+    var engine_ids = ['xpath3','xpath1'];//,'xquery3'];
+    var engines = {
+        'xpath3': 'XPath 3.0',
+        'xpath1': 'XPath 1.0',
+        //'xquery3': 'XQuery 3.0',
+    };
+    var index = (engine_ids.indexOf($('#engine-id').val()) + 1) % engine_ids.length;
+    var id = engine_ids[index];
+    $('#engine-id').val(id);
+    $('#engine-display').text(engines[id]);
+    //$('#engine-dialog')
 }
 
 $(document).ready(function () {

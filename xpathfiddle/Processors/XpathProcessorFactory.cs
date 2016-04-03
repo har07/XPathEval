@@ -12,9 +12,9 @@ namespace xpathfiddle.Processors
             IXpathProcessor processor = new SaxonProcessor();
             switch (engine)
             {
-                case XpathEngine.Saxon:
+                case XpathEngine.xpath3:
                     break;
-                case XpathEngine.DotNet:
+                case XpathEngine.xpath1:
                     processor = new DotNetProcessor();
                     break;
                 default:
@@ -26,7 +26,7 @@ namespace xpathfiddle.Processors
 
     public enum XpathEngine
     {
-        Saxon,
-        DotNet
+        xpath3,
+        xpath1
     }
 }
