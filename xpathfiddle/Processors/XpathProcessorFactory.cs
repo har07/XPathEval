@@ -17,6 +17,9 @@ namespace xpathfiddle.Processors
                 case XpathEngine.xpath1:
                     processor = new DotNetProcessor();
                     break;
+                case XpathEngine.xquery3:
+                    processor = new SaxonXQueryProcessor();
+                    break;
                 default:
                     break;
             }
@@ -27,6 +30,7 @@ namespace xpathfiddle.Processors
     public enum XpathEngine
     {
         xpath3,
-        xpath1
+        xpath1,
+        xquery3
     }
 }

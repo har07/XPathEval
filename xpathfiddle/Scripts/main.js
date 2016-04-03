@@ -56,11 +56,11 @@ function formatXml() {
 }
 
 function changeEngine() {
-    var engine_ids = ['xpath3','xpath1'];//,'xquery3'];
+    var engine_ids = ['xpath3','xpath1','xquery3'];
     var engines = {
         'xpath3': 'XPath 3.0',
         'xpath1': 'XPath 1.0',
-        //'xquery3': 'XQuery 3.0',
+        'xquery3': 'XQuery 3.0',
     };
     var index = (engine_ids.indexOf($('#engine-id').val()) + 1) % engine_ids.length;
     var id = engine_ids[index];

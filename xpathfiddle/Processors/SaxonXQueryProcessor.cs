@@ -5,21 +5,21 @@ using System.Xml;
 
 namespace xpathfiddle.Processors
 {
-    public class SaxonProcessor : IXpathProcessor
+    public class SaxonXQueryProcessor : IXpathProcessor
     {
         Processor _processor;
-        XPathCompiler _compiler;
+        XQueryCompiler _compiler;
         DocumentBuilder _builder;
 
-        public SaxonProcessor()
+        public SaxonXQueryProcessor()
         {
             _processor = new Processor();
-            _compiler = _processor.NewXPathCompiler();
+            _compiler = _processor.NewXQueryCompiler();
             _builder = _processor.NewDocumentBuilder();
         }
-        public string Process(string xml, string xpath)
+        public string Process(string xml, string xquery)
         {
-            var executable = _compiler.Compile(xpath);
+            var executable = _compiler.Compile(xquery);
             var evaluator = executable.Load();
 
             //set default context node:
@@ -27,9 +27,9 @@ namespace xpathfiddle.Processors
             doc.LoadXml(xml);
             var root = _builder.Build(doc.DocumentElement);
             evaluator.ContextItem = root;
-            
+
             var value = evaluator.Evaluate();
-            var result = String.Join(Environment.NewLine, 
+            var result = String.Join(Environment.NewLine,
                                      value.Cast<XdmItem>()
                                           .Select(o => o.ToString())
                                      );

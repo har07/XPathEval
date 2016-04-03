@@ -149,6 +149,7 @@
     <Compile Include="Processors\DotNetProcessor.cs" />
     <Compile Include="Processors\IXpathProcessor.cs" />
     <Compile Include="Processors\SaxonProcessor.cs" />
+    <Compile Include="Processors\SaxonXQueryProcessor.cs" />
     <Compile Include="Processors\XPathExtensions.cs" />
     <Compile Include="Processors\XpathProcessorFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
