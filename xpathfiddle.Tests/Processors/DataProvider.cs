@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace xpathfiddle.Tests.Processors
+namespace XPathEval.Tests.Processors
 {
     public static class DataProvider
     {

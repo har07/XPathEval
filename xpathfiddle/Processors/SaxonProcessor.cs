@@ -3,9 +3,9 @@ using System;
 using System.Linq;
 using System.Xml;
 
-namespace xpathfiddle.Processors
+namespace XPathEval.Processors
 {
-    public class SaxonProcessor : IXpathProcessor
+    public class SaxonProcessor : IXPathProcessor
     {
         Processor _processor;
         XPathCompiler _compiler;

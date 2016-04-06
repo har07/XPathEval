@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace xpathfiddle
+namespace XPathEval
 {
     public class BundleConfig
     {

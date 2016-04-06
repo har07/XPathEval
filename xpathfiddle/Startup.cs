@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(xpathfiddle.Startup))]
-namespace xpathfiddle
+[assembly: OwinStartupAttribute(typeof(XPathEval.Startup))]
+namespace XPathEval
 {
     public partial class Startup
     {

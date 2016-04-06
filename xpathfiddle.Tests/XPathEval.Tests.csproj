@@ -9,8 +9,8 @@
     <ProjectGuid>{56558404-49FE-461E-8BC8-DA5E03C51A3C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>xpathfiddle.Tests</RootNamespace>
-    <AssemblyName>xpathfiddle.Tests</AssemblyName>
+    <RootNamespace>XPathEval.Tests</RootNamespace>
+    <AssemblyName>XPathEval.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -96,9 +96,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\xpathfiddle\xpathfiddle.csproj">
+    <ProjectReference Include="..\xpathfiddle\XPathEval.csproj">
       <Project>{E1D1D2F7-4AAC-4491-A7A6-4EB1EF0AEEA6}</Project>
-      <Name>xpathfiddle</Name>
+      <Name>XPathEval</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

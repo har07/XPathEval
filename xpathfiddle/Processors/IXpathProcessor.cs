@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace xpathfiddle.Processors
+namespace XPathEval.Processors
 {
-    public interface IXpathProcessor
+    public interface IXPathProcessor
     {
         string Process(string xml, string xpath);
     }

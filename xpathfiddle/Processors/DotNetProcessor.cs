@@ -8,9 +8,9 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Xml.XPath;
 
-namespace xpathfiddle.Processors
+namespace XPathEval.Processors
 {
-    public class DotNetProcessor : IXpathProcessor
+    public class DotNetProcessor : IXPathProcessor
     {
         public string Process(string xml, string xpath)
         {

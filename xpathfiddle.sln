@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xpathfiddle", "xpathfiddle\xpathfiddle.csproj", "{E1D1D2F7-4AAC-4491-A7A6-4EB1EF0AEEA6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XPathEval", "xpathfiddle\XPathEval.csproj", "{E1D1D2F7-4AAC-4491-A7A6-4EB1EF0AEEA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xpathfiddle.Tests", "xpathfiddle.Tests\xpathfiddle.Tests.csproj", "{56558404-49FE-461E-8BC8-DA5E03C51A3C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XPathEval.Tests", "xpathfiddle.Tests\XPathEval.Tests.csproj", "{56558404-49FE-461E-8BC8-DA5E03C51A3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

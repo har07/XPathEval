@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using xpathfiddle.Processors;
+using XPathEval.Processors;
 
-namespace xpathfiddle.Tests.Processors
+namespace XPathEval.Tests.Processors
 {
     [TestClass]
     public class DotNetProcessorTest
@@ -11,7 +11,7 @@ namespace xpathfiddle.Tests.Processors
         public void TestReturnElement()
         {
             //Arrange
-            IXpathProcessor processor = XpathProcessorFactory.Get(XpathEngine.xpath1);
+            IXPathProcessor processor = XPathProcessorFactory.Get(XPathEngine.xpath1);
 
             //Act
             var result = processor.Process(DataProvider.GetInventorySample(), "//book[@id='myfave']/author");
@@ -25,7 +25,7 @@ namespace xpathfiddle.Tests.Processors
         public void TestReturnMixed()
         {
             //Arrange
-            IXpathProcessor processor = XpathProcessorFactory.Get(XpathEngine.xpath1);
+            IXPathProcessor processor = XPathProcessorFactory.Get(XPathEngine.xpath1);
             /*
             * Test mixed of element, attribute & text node
             */
@@ -45,7 +45,7 @@ namespace xpathfiddle.Tests.Processors
         public void TestReturnNumber()
         {
             //Arrange
-            IXpathProcessor processor = XpathProcessorFactory.Get(XpathEngine.xpath1);
+            IXPathProcessor processor = XPathProcessorFactory.Get(XPathEngine.xpath1);
             var query = "number(//book[1]/price)";
 
             //Act
@@ -60,7 +60,7 @@ namespace xpathfiddle.Tests.Processors
         public void TestReturnBoolean()
         {
             //Arrange
-            IXpathProcessor processor = XpathProcessorFactory.Get(XpathEngine.xpath1);
+            IXPathProcessor processor = XPathProcessorFactory.Get(XPathEngine.xpath1);
             var query = "//book[1]/price > 10";
 
             //Act
@@ -75,7 +75,7 @@ namespace xpathfiddle.Tests.Processors
         public void TestReturnString()
         {
             //Arrange
-            IXpathProcessor processor = XpathProcessorFactory.Get(XpathEngine.xpath1);
+            IXPathProcessor processor = XPathProcessorFactory.Get(XPathEngine.xpath1);
             var query = "concat(//book[1]/author/first-name, ' ', //book[1]/author/last-name)";
 
             //Act

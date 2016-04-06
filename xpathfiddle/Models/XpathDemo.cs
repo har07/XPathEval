@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Xml.Linq;
-using xpathfiddle.Processors;
+using XPathEval.Processors;
 
-namespace xpathfiddle.Models
+namespace XPathEval.Models
 {
-    public class XpathDemo
+    public class XPathDemo
     {
         public string Id { get; set; }
         public int Revision { get; set; }
-        public XpathEngine Engine { get; set; }
+        public XPathEngine Engine { get; set; }
         public string Xml { get; set; }
-        public string Xpath { get; set; }
-        public XpathResult Result { get; set; }
+        public string XPath { get; set; }
+        public XPathResult Result { get; set; }
     }
 }

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
-using xpathfiddle.Models;
-using xpathfiddle.Processors;
+using XPathEval.Models;
+using XPathEval.Processors;
 
-namespace xpathfiddle.Controllers
+namespace XPathEval.Controllers
 {
     public class XPathController : Controller
     {
@@ -18,13 +18,13 @@ namespace xpathfiddle.Controllers
         }
 
         [HttpPost]
-        public JsonResult ExecuteXpath(XpathDemo demo)
+        public JsonResult ExecuteXPath(XPathDemo demo)
         {
             string result = "", error = "";
-            IXpathProcessor processor = XpathProcessorFactory.Get(demo.Engine);
+            IXPathProcessor processor = XPathProcessorFactory.Get(demo.Engine);
             try
             {
-                result = processor.Process(demo.Xml, demo.Xpath);
+                result = processor.Process(demo.Xml, demo.XPath);
             }
             catch (Exception e)
             {
@@ -34,7 +34,7 @@ namespace xpathfiddle.Controllers
         }
 
         [HttpPost]
-        public JsonResult FormatXml(XpathDemo demo)
+        public JsonResult FormatXml(XPathDemo demo)
         {
             string result = "", error = "";
             try

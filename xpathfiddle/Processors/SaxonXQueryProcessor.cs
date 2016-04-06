@@ -3,9 +3,9 @@ using System;
 using System.Linq;
 using System.Xml;
 
-namespace xpathfiddle.Processors
+namespace XPathEval.Processors
 {
-    public class SaxonXQueryProcessor : IXpathProcessor
+    public class SaxonXQueryProcessor : IXPathProcessor
     {
         Processor _processor;
         XQueryCompiler _compiler;
@@ -36,4 +36,12 @@ namespace xpathfiddle.Processors
             return result;
         }
     }
+
+    //public static class XdmExtensions
+    //{
+    //    public static string ToStringRepresentation(this XdmValue)
+    //    {
+    //        var result = 
+    //    }
+    //}
 }

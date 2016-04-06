@@ -4,18 +4,18 @@
         Revision: 0,
         Engine: $('#engine-id').val(),
         Xml: ace.edit("xmleditor").getSession().getValue(),
-        Xpath: ace.edit("xpatheditor").getSession().getValue(),
-        XpathResult: {
+        XPath: ace.edit("xpatheditor").getSession().getValue(),
+        XPathResult: {
             Result: ""
         }
     };
     return JSON.stringify(model);
 }
 
-function executeXpath() {
+function executeXPath() {
     $.ajax({
         type: "POST",
-        url: '/XPath/ExecuteXpath',
+        url: '/XPath/ExecuteXPath',
         contentType: 'application/json',
         data: getModel(),
         success: function (result) {

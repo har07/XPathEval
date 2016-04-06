@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace xpathfiddle.Processors
+namespace XPathEval.Processors
 {
-    public static class XpathProcessorFactory
+    public static class XPathProcessorFactory
     {
-        public static IXpathProcessor Get(XpathEngine engine)
+        public static IXPathProcessor Get(XPathEngine engine)
         {
-            IXpathProcessor processor = new SaxonProcessor();
+            IXPathProcessor processor = new SaxonProcessor();
             switch (engine)
             {
-                case XpathEngine.xpath3:
+                case XPathEngine.xpath3:
                     break;
-                case XpathEngine.xpath1:
+                case XPathEngine.xpath1:
                     processor = new DotNetProcessor();
                     break;
-                case XpathEngine.xquery3:
+                case XPathEngine.xquery3:
                     processor = new SaxonXQueryProcessor();
                     break;
                 default:
@@ -27,7 +27,7 @@ namespace xpathfiddle.Processors
         }
     }
 
-    public enum XpathEngine
+    public enum XPathEngine
     {
         xpath3,
         xpath1,
