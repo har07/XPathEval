@@ -1,0 +1,120 @@
+﻿@model XPathEval.Models.XPathDemo
+@{
+    ViewBag.Title = "XPath Eval";
+}
+
+
+
+<div class="row">
+    <div class="col-md-6 box-long box-left">
+        <div class="powers">
+            <div class="editor-actions-left">
+                <h2 class="box-title">
+                    <span class="box-title-name">XML</span>
+                </h2>
+            </div>
+            <div class="editor-actions-right">
+                <button onclick="formatXml();"
+                        class="button button-medium mini-button tidy-code-button">
+                    Format
+                </button>
+            </div>
+        </div>
+        <div class="code-container">
+            <div id="xmleditor"></div>
+        </div>
+    </div>
+    <div class="col-md-6 box-short box-right">
+        <div class="powers">
+            <div class="editor-actions-left">
+                <button title="Change engine" data-type="html" class="button button-medium mini-button settings-nub"
+                        id="settings-pane-html"
+                        onclick="changeEngine();">
+                    <svg class="icon-gear">
+                        <use xlink:href="#gear" />
+                    </svg>
+                </button>
+                @*<span class="halflings halflings-cog"></span>*@
+                <h2 class="box-title">
+                    <input type="hidden" id="engine-id" value="xpath3" />
+                    <span class="box-title-name" id="engine-display">XPath 3.0</span>
+                    @*<select class="box-title-name">
+                            <option value="xpath3">XPath 3.0</option>
+                            <option value="xquery3">XQuery 3.0</option>
+                            <option value="xpath1">XPath 1.0</option>
+                        </select>*@
+                </h2>
+            </div>
+            <div class="editor-actions-right">
+                <button onclick="executeXPath();"
+                        class="button button-medium mini-button tidy-code-button">
+                    Run
+                </button>
+                <button onclick="saveDemo();"
+                        class="button button-medium mini-button tidy-code-button">
+                    Save
+                </button>
+            </div>
+        </div>
+        <div class="code-container">
+            <div id="xpatheditor"></div>
+        </div>
+    </div>
+    <div class="col-md-6 box box-right">
+        @*<div class="powers">
+                <div title="Double-click to expand." class="powers-drag-handle"></div>
+                <div class="editor-actions-left">
+                    <button title="Open Settings" data-type="html" class="button button-medium mini-button settings-nub" id="settings-pane-html">
+                        <svg class="icon-gear">
+                            <use href="#gear" />
+                        </svg>
+                    </button>
+                    <h2 class="box-title">
+                        <span class="box-title-name">HTML</span>
+                    </h2>
+                </div>
+                <div class="editor-actions-right">
+                    <button class="button button-medium mini-button tidy-code-button" data-type="html" id="html-tidy-code-button">
+                        Tidy
+                    </button>
+                    <button id="html-view-compiled" title="Toggle Compiled View" class="button button-medium mini-button view-compiled-button" data-type="html">
+                        View Compiled
+                    </button>
+                    <button title="Close" data-type="html" class="button button-medium mini-button close-editor-button">
+                        <svg class="icon-x">
+                            <use href="#x" />
+                        </svg>
+                    </button>
+                </div>
+            </div>*@
+        <div class="code-container">
+            <div id="outputdisplay"></div>
+        </div>
+    </div>
+    @*<div id="xpatheditor"></div>
+        <div id="outputdisplay"></div>*@
+    @*<div class="col-md-6">
+            <div id="xpatheditor"></div>
+        </div>*@
+</div>
+<div class="row">
+    <span id="status">Ready.</span>
+</div>
+<div class="hide">
+    <svg display="none" height="0" width="0" xmlns="http://www.w3.org/2000/svg">
+        <symbol viewBox="0 0 100 100" id="gear"><path d="M87.687 45.077c-.313-2.433-.816-4.807-1.542-7.08l8.145-11.73-5.827-7.514-.094-.123-5.825-7.514-12.955 5.577c-2.04-1.265-4.192-2.362-6.46-3.22L59.42 0H40.587l-3.71 13.474c-2.27.857-4.42 1.955-6.463 3.222L17.457 11.12l-5.825 7.513-.097.124-5.822 7.517 8.146 11.73c-.727 2.272-1.234 4.646-1.545 7.08L0 52.032l2.08 9.375.033.15 2.08 9.375 14 .76c1.296 2.03 2.772 3.927 4.4 5.67L20.2 91.587l8.416 4.173.138.068L37.17 100l9.308-10.796c1.16.11 2.335.173 3.524.173s2.358-.074 3.52-.184l9.317 10.804 8.414-4.173.14-.066 8.414-4.172-2.396-14.228c1.628-1.74 3.104-3.64 4.4-5.672l14-.76 2.078-9.374.035-.154L100 52.025l-12.313-6.948zM50.003 34.51c8.435 0 15.272 7.035 15.272 15.72 0 8.678-6.84 15.716-15.272 15.716-8.436 0-15.272-7.038-15.272-15.717 0-8.685 6.84-15.72 15.273-15.72z" /></symbol>
+    </svg>
+    @Html.HiddenFor(o => o.Id);
+    @Html.HiddenFor(o => o.Revision);
+    @Html.HiddenFor(o => o.Engine);
+    @Html.HiddenFor(o => o.Xml);
+    @Html.HiddenFor(o => o.XPath);
+    @Html.HiddenFor(o => o.Result.Data);
+</div>
+
+@section scripts {
+    @*<script src="https://cdn.jsdelivr.net/ace/1.2.3/min/ace.js" type="text/javascript"></script>*@
+    @*<script src="//cdn.jsdelivr.net/ace/1.2.3/min/ace.js" type="text/javascript" charset="utf-8"></script>*@
+    <script src="~/Scripts/Ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="~/Scripts/main.js" type="text/javascript" charset="utf-8"></script>
+}
