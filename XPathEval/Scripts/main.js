@@ -84,7 +84,7 @@ function displayData() {
     $("#Result_Result").val("");
 
     var engines = __engines__;
-    var id = $('#Engine').val(id);
+    var id = $('#Engine').val();
     $('#engine-id').val(id);
     $('#engine-display').text(engines[id]);
 }
