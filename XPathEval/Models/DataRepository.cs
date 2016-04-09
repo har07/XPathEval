@@ -10,8 +10,8 @@ namespace XPathEval.Models
 {
     public static class DataRepository
     {
-        private static string connectionString = ConfigurationManager.AppSettings["dbUrl"];
-        private static string dbName = ConfigurationManager.AppSettings["dbName"];
+        private static string connectionString = ConfigurationManager.AppSettings["MONGOLAB_URI"];
+        private static string dbName = ConfigurationManager.AppSettings["MONGOLAB_DB"];
         private const string collectionName = "DemoList";
 
         // Gets all Demo items from the MongoDB server.        
