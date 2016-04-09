@@ -3,7 +3,11 @@ Online XPath tester that supports higher version of XPath. Currently supports XP
 
 This is a little tools that enables people, like me, to play around with features available in XPath version higher than 1.0. I've been a regular user of [freeformatter](http://www.freeformatter.com/xpath-tester.html) in the past and then [xpathtester](http://www.xpathtester.com/xpath), for quick-testing and sharing short XPath demo, mainly [around StackOverflow](http://stackoverflow.com/search?q=user:2998271+[xpath]). The tools works very well for testing XPath 1.0, but their support for XPath 2.0 and above seems limited. 
 
-Considering the above, and that a great XML processor like Saxon has a free version available, I decided to roll out my own XPath tester, which currently named XPathEval (just like [eval.in](https://eval.in/) that I've been using too).
+Considering the above, and that a great XML processor like Saxon has a free version available, I decided to roll out my own XPath tester, which currently named XPathEval (similar to [eval.in](https://eval.in/) that I've been using too).
+
+Live
+-----
+A version is avaiable at http://xpatheval.apphb.com
 
 Contributing
 -------------
