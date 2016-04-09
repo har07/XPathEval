@@ -13,7 +13,7 @@ namespace XPathEval.Models
         public XPathEngine Engine { get; set; } = XPathEngine.xpath3;
         public string Xml { get; set; }
         public string XPath { get; set; }
-        public XPathResult Result { get; set; }
+        public XPathResult Result { get; set; } = new XPathResult();
     }
 
     public class XPathDemoMongo

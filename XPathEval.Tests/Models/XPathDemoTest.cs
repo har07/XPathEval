@@ -36,7 +36,7 @@ namespace XPathEval.Tests.Models
                     (XPathEngine)Enum.ToObject(typeof(XPathEngine), mongoModel.Engine) == model.Engine &&
                     mongoModel.Xml == model.Xml &&
                     mongoModel.XPath == model.XPath &&
-                    mongoModel.Result == model.Result?.Data
+                    mongoModel.Result == model.Result.Data
                 );
                 return isMatch;
             }).All(o => o);
