@@ -5,6 +5,15 @@ This is a little tools that enables people, like me, to play around with feature
 
 Considering the above, and that a great XML processor like Saxon has a free version available, I decided to roll out my own XPath tester, which currently named XPathEval (similar to [eval.in](https://eval.in/) that I've been using too).
 
+Tech-Stack
+-----------
+
+- Programming Language : C#
+- Web framework : ASP.NET MVC 5
+- XPath processor : [Saxon-HE 9.7](http://saxon.sourceforge.net/#F9.7HE)
+- Code editor : [Ace (Ajax.org Cloud9 Editor)](https://ace.c9.io/#nav=about)
+- Database : MongoDB
+
 Live
 -----
 A version is avaiable at http://xpatheval.apphb.com
